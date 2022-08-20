@@ -1,0 +1,47 @@
+@import './../../../../../assets/scss/import';
+
+// Horror
+.horror {
+    color: $text-white;
+    width: 100%;
+    padding: 40px 20px;
+  }
+  .member {
+    width: 330px;
+    margin: 0 auto;
+    &_heading {
+      text-align: center;
+      font-size: 30px;
+      padding: 20px 0 10px;
+    }
+  }
+  .member_list {
+    display: flex;
+    align-items: center;
+  }
+  .info {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+  
+    &_avt {
+      width: 100px;
+      height: 100px;
+      margin-right: 8px;
+      & > img {
+        border-radius: 50px;
+      }
+      @include mobile-md-tablet {
+        width: 70px;
+        height: 70px;
+      }
+    }
+    &_name {
+      font-size: 20px;
+    }
+  }
+  .works {
+    font-size: 20px;
+    flex: 1 1;
+  }
+  

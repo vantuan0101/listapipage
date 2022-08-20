@@ -1,0 +1,13 @@
+@import "../../assets/scss/import";
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 20px 0;
+  & > div {
+    font-size: 13px;
+    line-height: 19px;
+    color: #344b80;
+  }
+}

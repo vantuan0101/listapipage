@@ -1,0 +1,100 @@
+@import "../../../../../assets/scss/import";
+
+// feature
+.feature {
+  margin-top: 83px;
+  background-color: white;
+}
+.feature_contain {
+  width: calc(100% / 1.2);
+  max-width: 1200px;
+  margin: 0 auto;
+  background: linear-gradient(190deg, #ebf4fd, hsla(0, 0%, 100%, 0) 45%);
+  padding: 70px 0 60px;
+  @include desktop {
+    padding: 135px 0 105px;
+  }
+}
+.feature_cover {
+  width: calc(100% / 1.2);
+  max-width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.feature_heading {
+}
+.heading_top {
+  color: #00b6c8;
+  margin-bottom: 40px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 11px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.heading_build {
+  color: #1d1b84;
+  font-size: 33px;
+  font-weight: 700;
+  line-height: 39.27px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.heading_foot {
+  color: #344b80;
+  font-size: 17px;
+  line-height: 25.5px;
+  padding: 0px 6px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.feature_items {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: column;
+  @include desktop {
+    flex-direction: row;
+  }
+}
+.feature_item {
+  width: 100%;
+  padding: 35px 0;
+  border-bottom: 1px solid #e7edf1;
+  @include desktop {
+    width: calc(100% / 2);
+    padding: 0 60px;
+    margin-bottom: 70px;
+  }
+}
+.feature_icon {
+  display: flex;
+  .icon_i {
+    color: skyblue;
+    width: 38px;
+    height: 38px;
+    margin-bottom: 21px;
+    margin-right: 36px;
+    font-size: 38px;
+  }
+  .icon_name {
+    font-size: 21px;
+    font-weight: 600;
+    line-height: 30px;
+    color: #1d1b84;
+    margin-bottom: 16px;
+  }
+}
+.feature_info {
+  font-size: 17px;
+  margin-left: 0;
+  word-break: break-word;
+  white-space: pre-line;
+  color: #344b80;
+  @include desktop {
+    margin-left: 74px;
+  }
+}

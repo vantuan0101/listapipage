@@ -1,0 +1,20 @@
+@import "../../../../../assets/scss/import";
+
+.state {
+  margin-bottom: 40px;
+  text-align: left;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 6px;
+  & > span {
+    color: #c0c0cf;
+    word-break: break-word;
+    white-space: pre-line;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 28px;
+    // mix-blend-mode: difference;
+    // color: white;
+  }
+}
