@@ -2,7 +2,15 @@ import { useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import publicRoutes from "./routes/routes";
-const checkChildren = (children, index) => {
+
+interface RouteProps {
+  path: string;
+  element: JSX.Element;
+  children?: RouteProps[];
+}
+
+
+const checkChildren = (children :RouteProps, index :number) => {
   if (children.children) {
     return (
       <Route key={index} path={children.path} element={children.element}>
@@ -26,7 +34,7 @@ function App() {
   }, []);
   return (
     <Routes>
-      {publicRoutes.map((route, index) => {
+      {publicRoutes.map((route : RouteProps, index:number) => {
         return checkChildren(route, index);
       })}
     </Routes>

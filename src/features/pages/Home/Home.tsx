@@ -1,7 +1,6 @@
 import React from "react";
 import style from "./home.module.scss";
 import clsx from "clsx";
-import { Parallax } from "react-scroll-parallax";
 import HomeImage from "./components/HomeImage/HomeImage";
 import HomeHorror from "./components/HomeHorror/HomeHorror";
 import HomeState from "./components/HomeState/HomeState";
@@ -22,8 +21,8 @@ const Home = () => {
           <HomeState />
 
           <HomeImage
-            gridColumn={{ item1: "1/4", item2: "2/5" }}
-            gridRow={{ item1: "1/3", item2: "2/6" }}
+            columnGrid={{ item1: "1/4", item2: "2/5" }}
+            rowGrid={{ item1: "1/3", item2: "2/6" }}
           />
 
           <HomeState />
@@ -31,8 +30,8 @@ const Home = () => {
       </div>
       <HomeFeature />
       <HomeImage
-        gridColumn={{ item1: "2/5", item2: "1/4" }}
-        gridRow={{ item1: "2/6", item2: "1/3" }}
+        columnGrid={{ item1: "2/5", item2: "1/4" }}
+        rowGrid={{ item1: "2/6", item2: "1/3" }}
       />
       <HomeReview />
       <HomeForm />

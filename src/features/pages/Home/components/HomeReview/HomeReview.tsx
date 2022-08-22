@@ -4,7 +4,7 @@ import style from "./homereview.module.scss";
 import SliderField from "../../../../../components/SliderField/SliderField";
 const HomeReview = () => {
   const [isMobile, setIsMobile] = useState(false);
-  useEffect(() => {
+  useEffect(():void => {
     if (window.innerWidth < 768) {
       setIsMobile(true);
     }

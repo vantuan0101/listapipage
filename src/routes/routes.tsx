@@ -1,7 +1,13 @@
 import Home from "../features/pages/Home/Home";
 import MainLayout from "../Layout/MainLayout";
 
-const publicRoutes = [
+interface PublicRoute {
+  path: string;
+  element: JSX.Element;
+  children?: PublicRoute[];
+};
+
+const publicRoutes : Array<PublicRoute> = [
   {
     path: "/",
     element: <MainLayout />,

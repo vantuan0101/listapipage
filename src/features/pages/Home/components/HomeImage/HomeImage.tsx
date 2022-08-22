@@ -2,7 +2,19 @@ import clsx from "clsx";
 import React, { useEffect, useState } from "react";
 import { ParallaxBanner, ParallaxBannerLayer } from "react-scroll-parallax";
 import style from "./homeimage.module.scss";
-const HomeImage = ({ gridColumn, gridRow }) => {
+
+interface GridItemProps{
+    columnGrid: {
+      item1:string;
+      item2:string;
+    } ;
+    rowGrid:{
+      item1:string;
+      item2:string;
+    };
+}
+const HomeImage = ({columnGrid,
+  rowGrid}:GridItemProps) => {
   const [checkDevice, setCheckDevice] = useState({
     isTablet: false,
     isDesktop: false,
@@ -26,8 +38,8 @@ const HomeImage = ({ gridColumn, gridRow }) => {
         <ParallaxBanner
           style={{
             aspectRatio: "2 / 1",
-            gridColumn: checkDevice.isTablet && gridColumn.item1,
-            gridRow: checkDevice.isDesktop && gridRow.item1,
+            gridColumn : checkDevice.isTablet ? columnGrid.item1 : 'unset',
+            gridRow: checkDevice.isDesktop ? rowGrid.item1 : 'unset',
           }}
           className={clsx(style.demo_item_1)}
         >
@@ -40,8 +52,8 @@ const HomeImage = ({ gridColumn, gridRow }) => {
         <ParallaxBanner
           style={{
             aspectRatio: "2 / 1",
-            gridColumn: checkDevice.isTablet && gridColumn.item2,
-            gridRow: checkDevice.isDesktop && gridRow.item2,
+            gridColumn: checkDevice.isTablet ? columnGrid.item2 : 'unset',
+            gridRow: checkDevice.isDesktop ? rowGrid.item2  : 'unset',
           }}
           className={clsx(style.demo_item_2)}
         >
@@ -54,8 +66,8 @@ const HomeImage = ({ gridColumn, gridRow }) => {
         <ParallaxBanner
           style={{
             aspectRatio: "2 / 1",
-            gridColumn: checkDevice.isTablet && gridColumn.item1,
-            gridRow: checkDevice.isDesktop && gridRow.item1,
+            gridColumn: checkDevice.isTablet ? columnGrid.item1 : 'unset',
+            gridRow: checkDevice.isDesktop ? rowGrid.item1 : 'unset',
           }}
           className={clsx(style.demo_item_3)}
         >

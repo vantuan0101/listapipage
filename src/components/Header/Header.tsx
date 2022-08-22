@@ -3,13 +3,14 @@ import { FaAngleDown, FaBars, FaTimes } from "react-icons/fa";
 import clsx from "clsx";
 import style from "./header.module.scss";
 const Header = () => {
-  const [isShow, setIsShow] = useState(false);
-  const [changeBg, setChangeBg] = useState(false);
-  const handleClickMenu = () => {
+  const [isShow, setIsShow] = useState<boolean>(false);
+  const [changeBg, setChangeBg] = useState<boolean>(false);
+  const handleClickMenu : ()=> void = () => {
     setIsShow(!isShow);
   };
   useEffect(() => {
-    const res = window.addEventListener("scroll", () => {
+   
+    const res:any = window.addEventListener( "scroll", () => {
       if (window.scrollY > 0) {
         setChangeBg(true);
       } else {
@@ -21,7 +22,7 @@ const Header = () => {
     };
   }, []);
   return (
-    <div className={clsx(style.header, changeBg && style.bgHeader)}>
+    <div className={clsx(style.header, changeBg && style.bgHeader)} >  
       <div className={clsx(style.contain)}>
         <div className={clsx(style.logo)}>Logo</div>
         <div className={clsx(style.docs, isShow && style.isActive )}>

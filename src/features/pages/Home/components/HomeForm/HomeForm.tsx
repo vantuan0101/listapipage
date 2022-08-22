@@ -4,6 +4,12 @@ import style from "./homeform.module.scss";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
+
+interface IFormInputs {
+  message: string
+
+}
+
 const schema = yup
   .object({
     message: yup.string().required("Vui lòng nhập góp ý"),
@@ -14,10 +20,10 @@ const HomeForm = () => {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm({
+  } = useForm<IFormInputs>({
     resolver: yupResolver(schema),
   });
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = (data : IFormInputs) => console.log(data);
 
   return (
     <div className={clsx(style.main)}>
