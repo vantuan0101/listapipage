@@ -22,7 +22,16 @@ img {
   width: 100%;
   height: 100%;
 }
+.active{
+  font-weight: 600!important;
+  color: #007eff!important;
+  border-left-color: #007eff!important;
+}
 
+.active-scroll-spy {
+  background-color: red;
+  border-radius: 15px;
+}
 /*  */
 @font-face {
   font-family: "Poppins";

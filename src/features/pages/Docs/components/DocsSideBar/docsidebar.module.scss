@@ -1,0 +1,50 @@
+@import '../../../../../assets/scss/import';
+
+// sidebar
+
+.sidebar {
+    // background-color: wheat;
+    width: 20rem;
+    height: 100vh;
+    overflow-y: scroll;
+    padding-top: 68px;
+    font-size: 16px;
+    border-right: 1px solid #eee;
+  }
+  .sidebar_items {
+    padding: 1.5rem 0;
+  }
+  .sidebar_item {
+  }
+  
+  .sidebar_group {
+    &_items {
+      transition: height .1s ease-out;
+      font-size: .95em;
+    }
+  }
+  .sidebar_heading {
+      color: #2c3e50;
+      transition: color .15s ease;
+      cursor: pointer;
+      font-size: 1.1em;
+      font-weight: 700;
+      padding: 0.35rem 1.5rem 0.35rem 1.25rem;
+      width: 100%;
+      box-sizing: border-box;
+      margin: 0;
+      border-left: 0.25rem solid transparent;
+  }
+  .sidebar_link {
+      font-size: 1em;
+      font-weight: 400;
+      display: inline-block;
+      color: #2c3e50;
+      border-left: 0.25rem solid transparent;
+      padding: 0.35rem 1rem 0.35rem 1.25rem;
+      line-height: 1.4;
+      width: 100%;
+      box-sizing: border-box;
+      padding-left: 2rem;
+  }
+  

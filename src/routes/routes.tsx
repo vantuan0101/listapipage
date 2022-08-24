@@ -1,4 +1,6 @@
+import DocPages from "../features/pages/Docs";
 import Home from "../features/pages/Home/Home";
+import DocsLayout from "../Layout/DocsLayout";
 import MainLayout from "../Layout/MainLayout";
 
 interface PublicRoute {
@@ -15,6 +17,17 @@ const publicRoutes : Array<PublicRoute> = [
       {
         path: "/",
         element: <Home />,
+      },
+      
+    ],
+  },
+  {
+    path: "/docs",
+    element: <DocsLayout />,
+    children: [
+      {
+        path: "/docs/a",
+        element: <DocPages />,
       },
     ],
   },

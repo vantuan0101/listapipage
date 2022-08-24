@@ -1,0 +1,85 @@
+@import '../../../../../assets/scss/import';
+
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: transparent;
+  transition: all 0.5s ease;
+  height: 68px;
+  z-index: 100;
+  border-bottom: 1px solid #eee;
+  background-color: white;
+  
+}
+
+.contain {
+  width: 100%;
+  max-width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
+  @include mobile-md-tablet {
+    position: relative;
+  }
+  @include md-tablet-desktop {
+    padding: 0 25px;
+  }
+}
+.logo {
+  width: 132px;
+  height: 34px;
+}
+.docsText {
+  @include desktop {
+    color: $text-black !important;
+  }
+}
+.docs {
+  width: 100%;
+  display: none;
+  // transition: all cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
+  @include desktop {
+    display: flex;
+  }
+  &_items {
+    padding: 25px;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    line-height: 16px;
+    font-size: 16px;
+    font-weight: 400;
+    position: relative;
+    background-color: white;
+    color : black;
+
+    @include mobile-md-tablet {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      padding: 15px;
+      box-shadow: 0 6px 10px rgb(0 0 0 / 8%);
+      border-radius: 20px;
+      width: calc(100vw - 30px);
+      height: calc(100vh - 30px);
+    }
+  }
+  &_item {
+    @include tablet-pro-desktop {
+      width: 156px;
+      height: 55px;
+      background-color: transparent;
+    }
+  }
+  &_links {
+    color: $text-black;
+  }
+  
+}

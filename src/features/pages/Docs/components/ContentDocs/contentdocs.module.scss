@@ -1,0 +1,19 @@
+@import '../../../../..//assets/scss/import';
+
+// docs
+.docs {
+    font-size: 16px;
+    color: #2c3e50;
+    padding-top: 68px;
+  
+    background-color: green;
+    flex: 1;
+    height: 100vh;
+  
+    overflow-y: scroll;
+    
+  }
+  .items{
+    font-size: 30px;
+        height: 150vh;
+  }

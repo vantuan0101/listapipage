@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { FaAngleDown, FaBars, FaTimes } from "react-icons/fa";
 import clsx from "clsx";
 import style from "./header.module.scss";
+import { Link } from "react-router-dom";
 const Header = () => {
   const [isShow, setIsShow] = useState<boolean>(false);
   const [changeBg, setChangeBg] = useState<boolean>(false);
@@ -24,7 +25,7 @@ const Header = () => {
   return (
     <div className={clsx(style.header, changeBg && style.bgHeader)} >  
       <div className={clsx(style.contain)}>
-        <div className={clsx(style.logo)}>Logo</div>
+        <a href="/" className={clsx(style.logo)}>Logo</a>
         <div className={clsx(style.docs, isShow && style.isActive )}>
           <div className={clsx(style.docs_items)}>
             <div
@@ -34,9 +35,9 @@ const Header = () => {
               <FaTimes />
             </div>
             <div className={clsx(style.docs_item)}>
-              <a href="#" className={clsx(style.docs_links , changeBg && style.docsText)}>
+              <Link to="/docs/a" className={clsx(style.docs_links , changeBg && style.docsText)}>
                 Docs
-              </a>
+              </Link>
               <span className={clsx(style.docs_icon)}>
                 <FaAngleDown />
               </span>
@@ -44,7 +45,7 @@ const Header = () => {
           </div>
         </div>
         <div className={clsx(style.btn , changeBg && style.btn_bg)} >
-          <span className={clsx(style.btn_start)}>Get Start</span>
+          <Link to='/docs/a' className={clsx(style.btn_start)}>Get Start</Link>
           <span className={clsx(style.btn_mobile)} onClick={handleClickMenu}>
             <FaBars />
           </span>

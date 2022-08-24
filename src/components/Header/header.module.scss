@@ -68,6 +68,9 @@
       display: inline-block;
       border-radius: 20px;
       z-index: 2;
+      @include desktop{
+        display : none;
+      }
     }
     @include mobile-md-tablet {
       background-color: white;
@@ -105,7 +108,7 @@
 }
 .btn_bg {
   background-color: $btn-hover !important;
-  & > span {
+  & > span , a {
     color: white !important;
   }
 }
@@ -116,7 +119,7 @@
   text-align: center;
   border-radius: 8px;
   background-color: white;
-  & > span {
+  & > span , a {
     color: #171693;
     font-size: 15px;
     font-weight: 500;
