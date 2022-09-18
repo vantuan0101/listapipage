@@ -10,58 +10,58 @@
   }
 }
 
-.demo_items {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 300px 300px 300px;
-  grid-row-gap: 40px;
+// .demo_items {
+//   // display: grid;
+//   // grid-template-columns: 1fr;
+//   // grid-template-rows: 300px 300px 300px;
+//   // grid-row-gap: 40px;
 
-  @include desktop {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 50px 480px 50px;
-    grid-column-gap: 20px;
-  }
-  @include md-tablet {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-column-gap: 10px;
-    grid-row-gap: 30px;
-  }
-}
+//   // @include desktop {
+//   //   grid-template-columns: 1fr 1fr 1fr;
+//   //   grid-template-rows: 50px 480px 50px;
+//   //   grid-column-gap: 20px;
+//   // }
+//   // @include md-tablet {
+//   //   grid-template-columns: 1fr 1fr 1fr 1fr;
+//   //   grid-template-rows: 1fr 1fr;
+//   //   grid-column-gap: 10px;
+//   //   grid-row-gap: 30px;
+//   // }
+// }
 
-.demo_item_1 {
-  // @include desktop {
-  //   grid-row: 1/3;
-  // }
-  // @include md-tablet {
-  //   grid-column: 1/4;
-  // }
-  height: 100%;
-  border-radius: 10px;
-  transition: all cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
-}
-.demo_item_2 {
-  // @include desktop {
-  //   grid-row: 2/6;
-  // }
-  // @include md-tablet {
-  //   grid-column: 2/5;
-  // }
-  height: 100%;
-  border-radius: 10px;
-  transition: all cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
-}
-.demo_item_3 {
-  // @include desktop {
-  //   grid-row: 1/3;
-  // }
-  // @include md-tablet {
-  //   grid-column: 1/4;
-  // }
-  height: 100%;
-  border-radius: 10px;
-  transition: all cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
-}
-.demo_image {
-  border-radius: 10px;
-}
+// .demo_item_1 {
+//   // @include desktop {
+//   //   grid-row: 1/3;
+//   // }
+//   // @include md-tablet {
+//   //   grid-column: 1/4;
+//   // }
+//   height: 100%;
+//   border-radius: 10px;
+//   transition: all cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
+// }
+// .demo_item_2 {
+//   // @include desktop {
+//   //   grid-row: 2/6;
+//   // }
+//   // @include md-tablet {
+//   //   grid-column: 2/5;
+//   // }
+//   height: 100%;
+//   border-radius: 10px;
+//   transition: all cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
+// }
+// .demo_item_3 {
+//   // @include desktop {
+//   //   grid-row: 1/3;
+//   // }
+//   // @include md-tablet {
+//   //   grid-column: 1/4;
+//   // }
+//   height: 100%;
+//   border-radius: 10px;
+//   transition: all cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
+// }
+// .demo_image {
+//   border-radius: 10px;
+// }

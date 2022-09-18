@@ -1,41 +1,33 @@
-import clsx from "clsx";
-import React, { useEffect, useState } from "react";
-import { ParallaxBanner, ParallaxBannerLayer } from "react-scroll-parallax";
-import style from "./homeimage.module.scss";
+import clsx from 'clsx'
+import React, { useEffect, useState } from 'react'
+import { ParallaxBanner, ParallaxBannerLayer } from 'react-scroll-parallax'
+import style from './homeimage.module.scss'
+import { Masonry } from 'masonic'
+import ImageCard from '../../../../../components/Masonry/ImageCard'
+import docsApi from '../../../../../api/docsApi'
+import { IGetDocs } from '../../../../../interface'
 
-interface GridItemProps{
-    columnGrid: {
-      item1:string;
-      item2:string;
-    } ;
-    rowGrid:{
-      item1:string;
-      item2:string;
-    };
-}
-const HomeImage = ({columnGrid,
-  rowGrid}:GridItemProps) => {
-  const [checkDevice, setCheckDevice] = useState({
-    isTablet: false,
-    isDesktop: false,
-  });
+const HomeImage = () => {
+  const [data, setData] = useState<IGetDocs[]>([])
   useEffect(() => {
-    if (window.innerWidth >= 768 && window.innerWidth <= 991) {
-      setCheckDevice({
-        isTablet: true,
-        isDesktop: false,
-      });
-    } else if (window.innerWidth >= 992) {
-      setCheckDevice({
-        isTablet: false,
-        isDesktop: true,
-      });
+    const result = async () => {
+      const res = await docsApi.getAll()
+      setData(res.data)
     }
-  }, []);
+    result()
+  }, [])
+
   return (
     <div className={clsx(style.demo)}>
       <div className={clsx(style.demo_items)}>
-        <ParallaxBanner
+        <Masonry
+          items={data}
+          columnGutter={8} // Set khoảng cách giữa các column
+          columnWidth={300} // Set chiều rộng tối thiểu là 300px
+          overscanBy={5} // Giá trị để render trước khi scroll tới
+          render={ImageCard} // Grid item của component
+        />
+        {/* <ParallaxBanner
           style={{
             aspectRatio: "2 / 1",
             gridColumn : checkDevice.isTablet ? columnGrid.item1 : 'unset',
@@ -76,10 +68,10 @@ const HomeImage = ({columnGrid,
             speed={8}
             easing="easeInOutCubic"
           />
-        </ParallaxBanner>
+        </ParallaxBanner> */}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default HomeImage;
+export default HomeImage

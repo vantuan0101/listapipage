@@ -1,0 +1,17 @@
+@import '../../../assets/scss/import';
+@import './components/DocsSideBar/docsidebar.module.scss';
+.main {
+  width: 100%;
+}
+.contain {
+  display: flex;
+  width: 100%;
+  position: relative;
+}
+.content{
+  margin-top: 100px;
+  padding: 0 15px;
+  @include md-tablet-desktop{
+    padding: 0 25px;
+  }
+}

@@ -2,7 +2,11 @@
 
 .home {
   width: 100%;
-  background-color: $bg-primary;
+  background-image: url('../../../assets/image/background.jpeg');
+  background-repeat: round;
+  background-attachment: fixed;
+  transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+  // background-color: $bg-primary;
 }
 .contain {
   width: 100%;

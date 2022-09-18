@@ -35,6 +35,9 @@
 .logo {
   width: 132px;
   height: 34px;
+  & > img {
+    transform: scale(1.4);
+  }
 }
 .docsText {
   @include desktop {

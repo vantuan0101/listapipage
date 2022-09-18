@@ -6,7 +6,11 @@
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  background-color: gray;
+  // background-color: gray;
+  background-image: url('../../../../../assets/image/bg.jpg');
+  background-repeat: round;
+  background-attachment: fixed;
+  transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -22,6 +26,9 @@
 .form {
   width: 100%;
   max-width: 500px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  padding: 10px;
+  border-radius: 10px;
 }
 .input {
   padding: 10px 10px 200px;
@@ -31,6 +38,7 @@
   border-radius: 10px;
   outline: none;
   margin-bottom: 10px;
+  background: linear-gradient(181.6deg,#f7fbfe .74%,#fff 76.68%);
 }
 .error {
   color: red;
